@@ -83,7 +83,7 @@ class IP
      * @return bool
      * @throws \Exception
      */
-    public function validateV4($ip)
+    public static function validateV4($ip)
     {
         return static::validate($ip, static::V4);
     }

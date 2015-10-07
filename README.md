@@ -19,18 +19,18 @@ Well done!
 
 API
 -------------------
-    localIpsV4  Return local ips. Use ifconfig.
-    localIpV4   Return local ip. Use ifconfig.
-    validate    Validate ip.
-    validateV4  Validate ipv4.
-    validateV6  Validate ipv6.
-    ipv4ToLong  Ip v4 to long.
-    longToIpv4  Long to ipv4.
-    ipv6ToLong  Ip v6 to long.
-    longToIpv6  Long to Ip v6.
-    ip2bin      Ip to bin.
-    bin2ip      Bin to ip.
-    version     Returns ip version.
+    localIpsV4 - Return local ips. Use ifconfig.
+    localIpV4  - Return local ip. Use ifconfig.
+    validate   - Validate ip.
+    validateV4 - Validate ipv4.
+    validateV6 - Validate ipv6.
+    ipv4ToLong - Ip v4 to long.
+    longToIpv4 - Long to ipv4.
+    ipv6ToLong - Ip v6 to long.
+    longToIpv6 - Long to Ip v6.
+    ip2bin     - Ip to bin.
+    bin2ip     - Bin to ip.
+    version    - Returns ip version.
 
 ## Example
 
