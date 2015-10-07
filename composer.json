@@ -1,0 +1,25 @@
+{
+    "name": "kfosoft/php-ip-helper",
+    "description": "PHP IP Helper",
+    "keywords": [
+        "php",
+        "php ip",
+        "ip helper",
+        "php ip helper",
+        "php helper"
+    ],
+    "type": "library",
+    "authors": [
+        {
+            "name": "Cyril Turkevich",
+            "email": "cyril.turkevich@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0",
+        "ext-gmp" : "*"
+    },
+    "autoload": {
+        "psr-4": {"kfosoft\\": ""}
+    }
+}
