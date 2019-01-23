@@ -33,6 +33,9 @@ class IP
             } elseif (preg_match('/inet addr:((?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:[.](?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3})\s/',
                 $str, $matches)) {
                 $localAddrs[$ifName] = $matches[1];
+            } elseif (preg_match('/inet ((?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:[.](?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3})\s/',
+                $str, $matches)) {
+                $localAddrs[$ifName] = $matches[1];
             }
         }
 
