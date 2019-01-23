@@ -22,7 +22,8 @@ class IP
     {
         $out = explode(PHP_EOL, shell_exec($ifconfig));
         $localAddrs = [];
-        $ifName = 'unknown';
+        $ifName = 'interface';
+        $i=0;
         foreach ($out as $str) {
             $matches = [];
             if (preg_match('/^([a-z0-9]+)(:\d{1,2})?(\s)+Link/', $str, $matches)) {
@@ -32,11 +33,12 @@ class IP
                 }
             } elseif (preg_match('/inet addr:((?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:[.](?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3})\s/',
                 $str, $matches)) {
-                $localAddrs[$ifName] = $matches[1];
+                $localAddrs[$ifName==='interface'?$ifName.$i:$ifName] = $matches[1];
             } elseif (preg_match('/inet ((?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:[.](?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3})\s/',
                 $str, $matches)) {
-                $localAddrs[$ifName] = $matches[1];
+                $localAddrs[$ifName==='interface'?$ifName.$i:$ifName] = $matches[1];
             }
+            $i++;
         }
 
         return $localAddrs;
